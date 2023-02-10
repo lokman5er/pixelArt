@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Pixel Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://use.fontawesome.com/c0368b74b2.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/svgs/fav.ico">
+
+</head>
+<body>
+    <nav class="nav">
+
+        <h1>Pixel Art</h1>
+
+        <div class=nav-btn-container>
+            <button id="mario" class="nav-btn">MARIO</button>
+            <button id="toad" class="nav-btn">TOAD</button>
+            <button id="surprise" class="nav-btn surprise">SURPRISE</button>
+        </div>  
+
+    </nav>
+
+    <div class="content-wrapper">
+
+        <div class="left">
+
+            <div class="left-wrapper">
+
+                <div class="select-size">
+                    <label for="size">Select the size:</label>
+                    <select id="size" class="select-btn">
+                        <option value="8">8x8</option>
+                        <option value="12">12x12</option>
+                        <option value="16">16x16</option>
+                        <option value="32">32x32</option>
+                    </select>
+                </div>
+                <div class="content-container"></div>
+            </div>
+            
+        </div>
+        <div class="right-intro">
+            <h2>GET CREATIVE!</h2>
+            <p>Unleash your creativity with our pixel editor! Explore the endless possibilities by taking a look at the templates provided at the top of the window for inspiration. And when you're done, feel free to download your creation in various formats. Happy designing!</p>
+        </div>
+
+        <div class="tools">
+            <h2>TOOLS & SETTINGS</h2>
+
+            <p>Select the ideal tool for your creation, be it pencil or fill bucket. If mistakes happen, use undo/redo. Erase pixels with the eraser tool. Turn off grid lines if needed. And don't hesitate to start fresh with the trash icon. Unleash your pixel art skills!</p>
+            
+            <div class="tools-wrapper">
+
+                <button id="pen" class="btn">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="32" height="32"  viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path id="pen-svg" fill="#154050" d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+                </button>
+                <button id="bucket" class="btn">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="32" height="32" viewBox="0 0 1280.000000 1280.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g id="fill-svg" fill="#154050" transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" stroke="none">
+                        <path d="M11255 12084 c-132 -31 -211 -65 -298 -128 -34 -25 -474 -457 -977
+                        -960 l-915 -916 -650 648 c-503 502 -670 662 -740 711 -109 76 -296 169 -425
+                        209 -516 163 -1067 65 -1485 -263 -44 -35 -877 -861 -1851 -1837 -1431 -1434
+                        -1782 -1790 -1831 -1861 -122 -174 -219 -397 -265 -611 -19 -86 -22 -133 -23
+                        -316 0 -188 3 -229 23 -324 60 -281 186 -534 368 -739 39 -45 1052 -1061 2250
+                        -2258 2279 -2277 2237 -2236 2456 -2370 232 -141 511 -241 800 -286 155 -24
+                        461 -24 617 1 391 60 739 213 1041 457 53 43 718 701 1501 1486 1455 1457
+                        1462 1465 1589 1673 161 265 269 591 300 909 55 563 -123 1139 -484 1568 -41
+                        48 -547 560 -1125 1138 l-1051 1050 929 930 c510 511 942 950 958 975 43 64
+                        68 116 95 196 20 60 23 88 23 214 -1 129 -4 153 -27 223 -72 213 -238 380
+                        -453 453 -67 23 -100 28 -205 30 -69 2 -134 1 -145 -2z m-4438 -1804 c15 -6
+                        296 -279 630 -613 l603 -602 -583 -585 c-630 -633 -630 -633 -684 -795 -24
+                        -71 -27 -95 -27 -220 0 -125 3 -149 27 -220 38 -113 90 -198 177 -285 87 -87
+                        172 -139 285 -177 71 -24 95 -27 220 -27 125 0 149 3 220 27 162 54 162 54
+                        795 684 l585 583 1056 -1058 c647 -648 1068 -1077 1087 -1108 32 -50 82 -164
+                        82 -184 0 -7 -1140 -10 -3538 -10 l-3537 0 -482 483 c-332 332 -487 494 -498
+                        519 -19 47 -19 79 0 126 11 26 503 525 1713 1735 933 935 1711 1708 1727 1718
+                        33 21 98 25 142 9z"/>
+                        <path d="M1323 4696 c-104 -34 -150 -82 -286 -297 -272 -432 -499 -831 -681
+                        -1198 -184 -371 -293 -651 -337 -866 -18 -85 -20 -124 -16 -265 4 -141 9 -182
+                        35 -280 111 -428 379 -756 775 -945 217 -104 392 -139 657 -132 152 4 190 9
+                        290 35 283 73 494 195 689 398 238 247 377 562 397 906 8 119 -5 232 -42 372
+                        -109 420 -467 1131 -987 1961 -132 211 -168 254 -244 291 -64 32 -185 41 -250
+                        20z"/>
+                        </g>
+                    </svg>                   
+                </button>
+                <button id="eraser" class="btn">
+                    <img class="svg" src="/svgs/eraser.svg">
+                </button>
+                <button id="backwards" class="btn">
+                    <img class="svg" src="/svgs/left.svg">
+                </button>
+                <button id="forwards" class="btn">
+                    <img class="svg" src="/svgs/right.svg">
+                </button>
+                <button id="grid" class="btn">
+                    <img class="svg grid-img" src="/svgs/gridOff.svg">
+                </button>
+                <button id="reset" class="btn">
+                    <img class="svg"  src="/svgs/trash.png">
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="colors">
+            <div class="colors-title">
+                <h2>COLORS</h2>
+                <input class="color" type="color">
+            </div>
+
+            <p>Get inspired with a special retro color palette, or adjust the brightness to suit your needs. If you can't find the perfect shade, the color picker with its rainbow border lets you choose from an infinite spectrum of hues. Unleash your creativity and bring your pixel art to life with a world of color at your fingertips!</p>
+
+            <div class="color-container">
+
+                <button class="color-btn color-btn-top-left"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn color-btn-top-right"></button>
+                <button class="color-btn color-btn-bottom-left"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn"></button>
+                <button class="color-btn color-btn-bottom-right"></button>
+
+            </div>
+
+            <div class="opacity-container">
+                <div class="color-opacity"></div>
+                <input class="range" type="range" min="1" max="100" value="2" class="slider" id="myRange">
+            </div>
+
+        </div>
+
+        <div class="export">
+            <h2>EXPORT & IMPORT</h2>
+            <p>When you're happy with your pixel creation, don't hesitate to export it as a JPG, PNG (with transparant background), or even a GIF for download. Additionally, you can also download the creation as a .txt file and upload it in future for editing. Show off your masterpiece to the world!</p>
+            <div class="image-format-container">
+                <div class="image-format-left">
+
+                    <label for="image-format">Download Image in:</label>
+                    <select id="image-format" class="select-btn" name="image-format">
+                        <option value="jpg">JPG</option>
+                        <option value="png">PNG</option>
+                        <option value="gif">GIF</option>
+                        <option value="txt">TXT</option>
+                    </select>
+                    
+                </div>
+
+                <div class="export-btn-container">
+                    <button id="export-btn" class="select-btn">DOWNLOAD</button>
+                </div>
+
+            </div>
+            <div class="upload-container">
+                <label class="upload-label">Import File:</label>
+                <button class="upload-btn select-btn">IMPORT</button>
+                <input type="file" accept='.txt'>
+            </div>
+        </div>
+        
+        <div class="impressum">
+            <p>Lokman Beser</p>
+            <p>lokmanbeser@icloud.com</p>
+            <p>Gronowskistr. 2</p>
+            <p>48161 Münster</p>
+        </div>
+
+        
+
+    </div>
+
+
+
+</body>
+</html>

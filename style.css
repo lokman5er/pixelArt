@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  color: #154050;
+}
+
+@font-face {
+  font-family: "Unifont";
+  src: url("/unifont.otf");
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #e0ddd1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+nav {
+  width: 90%;
+  margin: 0 5%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: min(60px, 5vw);
+  width: 80%;
+}
+
+h2 {
+  font-size: min(24px, 2.2vw);
+}
+
+p {
+  margin-top: 5px;
+  font-family: "Unifont";
+  font-size: min(16px, 1.8vw);
+}
+
+.nav-btn {
+  margin: 0 1.5vw;
+  padding: 15px 17px;
+  font-size: min(2vh, 1.3vw);
+  background-color: #154050;
+  color: white;
+  font-weight: 600;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.surprise {
+  margin-right: 0px;
+}
+
+.nav-btn-active {
+  background-color: #92bac1;
+}
+
+.content-wrapper {
+  width: 100%;
+  height: 85vh;
+  display: grid;
+  grid-template-areas:
+    "left intro"
+    "left tools"
+    "left color"
+    "left export"
+    "left imp";
+}
+
+.left {
+  width: 50vw;
+  height: 100%;
+  grid-area: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.select-size {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  --size: 8;
+  --containerSize: min(600px, 40vw);
+  width: var(--containerSize);
+  height: var(--containerSize);
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(var(--size), 1fr);
+  grid-template-rows: repeat(var(--size), 1fr);
+  gap: 3px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.pixel {
+  background-color: white;
+}
+
+.right {
+  width: 50vw;
+  height: 93%;
+}
+
+.right-intro,
+.tools,
+.colors,
+.export {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.right-intro {
+  grid-area: intro;
+}
+
+.tools {
+  grid-area: tools;
+}
+
+.colors {
+  grid-area: color;
+}
+
+.export {
+  grid-area: export;
+}
+
+.impressum {
+  grid-area: imp;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.tools-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.bucket {
+  height: 30px;
+}
+
+.colors-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color {
+  height: 30px;
+  width: 60px;
+  border: 5px solid transparent;
+  border-image: linear-gradient(
+    to bottom right,
+    #b827fc 0%,
+    #2c90fc 25%,
+    #b8fd33 50%,
+    #fec837 75%,
+    #fd1892 100%
+  );
+  border-image-slice: 1;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 0px;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+.color-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.color-btn {
+  height: 60px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.color-btn-top-left {
+  border-top-left-radius: 10px;
+}
+
+.color-btn-top-right {
+  border-top-right-radius: 10px;
+}
+
+.color-btn-bottom-left {
+  border-bottom-left-radius: 10px;
+}
+
+.color-btn-bottom-right {
+  border-bottom-right-radius: 10px;
+}
+
+.color-opacity {
+  height: 40px;
+  background: linear-gradient(90deg, #154050, #ffffff);
+  border-radius: 10px;
+}
+
+.range {
+  --color: #eabfaf;
+  -webkit-appearance: none;
+  position: relative;
+  top: -40px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 40px;
+  background: var(--color);
+  cursor: pointer;
+}
+
+.options-container {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Unifont";
+}
+
+.btn {
+  height: 60px;
+  width: 70px;
+  border-radius: 10px;
+  margin-top: 7px;
+}
+
+.select-btn {
+  padding: 7px 5px;
+  border-radius: 5px;
+}
+
+.svg {
+  width: 40px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.opacity-container {
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-format-container,
+.upload-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-container {
+  margin-bottom: 50px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+  font-size: min(17px, 1.6vw);
+}
+
+.active-tool {
+  background-color: #b3d6dc;
+}
+
+select {
+  text-align: center;
+}
+
+.grid-img {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+  top: 0%;
+  padding: 10px 0;
+  z-index: 100;
+  background-color: #e0ddd1;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding-bottom: 10vh;
+  }
+
+  nav {
+    display: block;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin: 2vh 0;
+    font-size: 8vw;
+  }
+
+  .nav-btn {
+    font-size: 10px;
+  }
+
+  #mario {
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  .select-size {
+    width: 100%;
+  }
+
+  .content-wrapper {
+    width: 80vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "tools"
+      "left"
+      "color"
+      "export"
+      "imp";
+  }
+
+  .right-intro,
+  .tools,
+  .colors,
+  .export {
+    width: 100%;
+  }
+
+  .right-intro {
+    margin-top: 5vw;
+  }
+
+  .tools {
+    margin-bottom: 0px;
+  }
+
+  .left {
+    width: 80vw;
+    margin-bottom: 40px;
+  }
+
+  .content-container {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .image-format-container {
+    display: block;
+  }
+
+  .image-format-left {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #image-format {
+    margin-top: -4px;
+  }
+
+  #export-btn {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .export-btn-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .fixed {
+    width: 90%;
+  }
+
+  #backwards {
+    order: 1;
+  }
+
+  #forwards {
+    order: 2;
+  }
+
+  #reset {
+    order: 3;
+  }
+}
